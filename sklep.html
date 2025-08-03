@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sklep – Twoje Diety</title>
+  <style>
+    /* Reset marginesów i paddingów */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f2f1, #fff);
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #004d40;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #00796b;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    /* Dwie kolumny na większych ekranach */
+    @media (min-width: 700px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .diet-card {
+      background: #ffffffcc; /* lekko przeźroczyste białe tło */
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 25px 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .diet-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .diet-card h3 {
+      color: #00796b;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .diet-card p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    .buy-button {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #004d40;
+      color: #e0f2f1;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.25s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #00796b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sklep z Dietami</h1>
+    <p>Wybierz dietę dopasowaną do Twoich potrzeb</p>
+  </header>
+
+  <main class="container">
+    <section class="diet-card">
+      <h3>Dieta redukcyjna</h3>
+      <p>Plan żywieniowy wspierający spalanie tkanki tłuszczowej, bogaty w błonnik i białko.</p>
+      <a href="#" class="buy-button">Kup teraz</a>
+    </section>
+
+    <section class="diet-card">
+      <h3>Dieta na utrzymanie</h3>
+      <p>Zrównoważony jadłospis pozwalający utrzymać aktualną masę ciała bez efektu jo-jo.</p>
+      <a href="#" class="buy-button">Kup teraz</a>
+    </section>
+
+    <section class="diet-card">
+      <h3>Nadwyżka kaloryczna</h3>
+      <p>Idealna dieta na masę — więcej kalorii, więcej energii, więcej mięśni.</p>
+      <a href="#" class="buy-button">Kup teraz</a>
+    </section>
+
+    <section class="diet-card">
+      <h3>Dieta Hashimoto</h3>
+      <p>Jadłospis wspierający tarczycę – bez glutenu, laktozy, z niskim IG.</p>
+      <a href="#" class="buy-button">Kup teraz</a>
+    </section>
+
+    <section class="diet-card">
+      <h3>Dieta z niskim IG i ŁG</h3>
+      <p>Stabilizuje poziom cukru we krwi – polecana przy insulinooporności i PCOS.</p>
+      <a href="#" class="buy-button">Kup teraz</a>
+    </section>
+
+    <section class="diet-card">
+      <h3>Dieta sportowa</h3>
+      <p>Dla osób aktywnych fizycznie – odpowiednie proporcje białka, węglowodanów i tłuszczu.</p>
+      <a href="#" class="buy-button">Kup teraz</a>
+    </section>
+  </main>
+</body>
+</html>
