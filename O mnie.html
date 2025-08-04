@@ -18,65 +18,63 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
-    h2 {
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu h2 {
       color: #00796b;
       cursor: pointer;
+      margin: 0;
     }
 
-    ul.submenu {
-      list-style-type: none;
-      padding-left: 20px;
-      margin-top: 10px;
+    .submenu {
       display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 100;
     }
 
-    ul.submenu li {
-      margin-top: 10px;
-      color: #444;
-      cursor: pointer;
-      transition: color 0.3s;
+    .menu:hover .submenu {
+      display: block;
     }
 
-    ul.submenu li:hover {
-      color: #009688;
+    .submenu a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
     }
 
-    .content {
-      margin-top: 20px;
-      line-height: 1.6;
-      display: none;
-      background-color: #f1f1f1;
-      padding: 15px;
-      border-radius: 8px;
+    .submenu a:hover {
+      background-color: #f0f0f0;
+      color: #00796b;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h2 onclick="toggleMenu()">O mnie</h2>
-    <ul id="submenu" class="submenu">
-      <li onclick="showContent('kim-jestem')">Kim jestem?</li>
-    </ul>
-
-    <div id="kim-jestem" class="content">
-      <p>Cześć! Nazywam sie Monika Piesio. 👋</p>
+    <div class="menu">
+      <h2>O mnie</h2>
+      <div class="submenu">
+        <a href="kim-jestem.html">Kim jestem?</a>
+      </div>
     </div>
   </div>
 
-  <script>
-    function toggleMenu() {
-      const submenu = document.getElementById('submenu');
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function showContent(id) {
-      const content = document.getElementById(id);
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-
 </body>
 </html>
+
