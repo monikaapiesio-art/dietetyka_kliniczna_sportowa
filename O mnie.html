@@ -1,80 +1,60 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>O mnie – Kim jestem?</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      padding: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-
-    .menu {
-      position: relative;
-      display: inline-block;
-    }
-
-    .menu h2 {
-      color: #00796b;
-      cursor: pointer;
-      margin: 0;
-    }
-
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 100;
-    }
-
-    .menu:hover .submenu {
-      display: block;
-    }
-
-    .submenu a {
-      display: block;
-      color: #333;
-      text-decoration: none;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: background-color 0.2s;
-    }
-
-    .submenu a:hover {
-      background-color: #f0f0f0;
-      color: #00796b;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rozwijane Menu</title>
 </head>
 <body>
-
-  <div class="container">
-    <div class="menu">
-      <h2>O mnie</h2>
-      <div class="submenu">
-        <a href="kim-jestem.html">Kim jestem?</a>
-      </div>
-    </div>
-  </div>
-
+    <nav>
+        <ul>
+            <li>O mnie
+                <ul class="dropdown">
+                    <li><a href="kim-jestem.html">Kim jestem</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
+CSS (styles.css)
+nav {
+    background-color: #333;
+    color: white;
+}
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav > ul > li {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+}
+
+nav > ul > li > .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    z-index: 1;
+}
+
+nav > ul > li:hover > .dropdown {
+    display: block;
+}
+
+nav .dropdown li {
+    padding: 10px;
+}
+
+nav .dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav .dropdown li a:hover {
+    background-color: #555;
+}
