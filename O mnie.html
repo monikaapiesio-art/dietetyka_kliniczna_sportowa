@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Rozwijane O mnie</title>
+  <meta charset="UTF-8">
+  <title>O mnie</title>
+  <style>
+    .menu {
+      position: relative;
+      display: inline-block;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      color: #333;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .submenu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+    }
+
+    .menu:hover .submenu {
+      display: block;
+    }
+
+    .submenu a:hover {
+      color: #007BFF;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>O mnie
-                <ul class="dropdown">
-                    <li><a href="kim-jestem.html">Kim jestem</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+
+<div class="menu">
+  <button class="menu-button">O mnie</button>
+  <div class="submenu">
+    <a href="kim-jestem.html">Kim jestem?</a>
+  </div>
+</div>
+
 </body>
 </html>
-CSS (styles.css)
-nav {
-    background-color: #333;
-    color: white;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav > ul > li {
-    position: relative;
-    display: inline-block;
-    padding: 15px;
-}
-
-nav > ul > li > .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    z-index: 1;
-}
-
-nav > ul > li:hover > .dropdown {
-    display: block;
-}
-
-nav .dropdown li {
-    padding: 10px;
-}
-
-nav .dropdown li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav .dropdown li a:hover {
-    background-color: #555;
-}
