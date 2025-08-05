@@ -4,55 +4,47 @@
   <meta charset="UTF-8">
   <title>O mnie</title>
   <style>
-    .menu {
-      position: relative;
-      display: inline-block;
-      font-family: Arial, sans-serif;
-    }
+.menu {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
 
-    .menu-button {
-      background: none;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      padding: 10px;
-      color: #333;
-    }
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
+}
 
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f2f2f2;
-      border: 1px solid #ccc;
-      padding: 10px;
-      z-index: 1;
-    }
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 10;
+  min-width: 150px;
+}
 
-    .submenu a {
-      text-decoration: none;
-      color: #000;
-      font-size: 16px;
-    }
+.submenu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  padding: 5px 0;
+}
 
-    .menu:hover .submenu {
-      display: block;
-    }
+.menu-button:hover + .submenu,
+.menu:hover .submenu {
+  display: block;
+}
 
-    .submenu a:hover {
-      color: #007BFF;
-    }
-  </style>
-</head>
-<body>
-
-<div class="menu">
-  <button class="menu-button">O mnie</button>
-  <div class="submenu">
-    <a href="kim-jestem.html">Kim jestem?</a>
-  </div>
-</div>
-
-</body>
-</html>
+.submenu a:hover {
+  color: #007BFF;
+}
